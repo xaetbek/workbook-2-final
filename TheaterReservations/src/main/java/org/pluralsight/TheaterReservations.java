@@ -5,7 +5,8 @@ import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class TheaterReservations {
-    private String fullName;
+    private String userInputName;
+    private String showFullName;
     private String userInputDate;
     private LocalDate dateOfShow;
     private int numTickets;
@@ -16,7 +17,9 @@ public class TheaterReservations {
         System.out.println("Hello, welcome to Exercise 4");
 
         System.out.print("Please enter your name: ");
-        this.fullName = read.nextLine();
+        this.userInputName = read.nextLine();
+        String[] name = userInputName.split(" ");
+        this.showFullName = name[1] + ", " + name[0];
 
         System.out.print("What date will you be coming (MM/dd/yyyy): ");
         this.userInputDate = read.nextLine();
@@ -30,9 +33,9 @@ public class TheaterReservations {
 
     public void showReservation() {
         if (numTickets > 1) {
-            System.out.println(numTickets + " tickets reserved for " + dateOfShow + " under " + fullName);
+            System.out.println(numTickets + " tickets reserved for " + dateOfShow + " under " + showFullName);
         } else {
-            System.out.println(numTickets + " ticket reserved for " + dateOfShow + " under " + fullName);
+            System.out.println(numTickets + " ticket reserved for " + dateOfShow + " under " + showFullName);
         }
     }
 }
