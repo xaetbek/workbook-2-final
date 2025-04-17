@@ -27,8 +27,5 @@ public class HighScoreWins {
         } else {
             System.out.println("The team " + "'" + teamTwo + "' is the winner with score: " + scoreTwo);
         }
-
-//        public static void gameWinner(String gameScore){
-//        }
     }
 }
