@@ -57,11 +57,13 @@ public class AddressBuilder {
     public void displayInfo() {
         // Display the customer's billing information
         System.out.println();
-        System.out.println(fullBillingAdd.append(fullName).append("\nBilling Address:\n" + billingStreet).append("\n" + billingCity).append(", " +
+        System.out.println(fullBillingAdd.append(fullName).append("\nBilling Address:\n"
+                + billingStreet).append("\n" + billingCity).append(", " +
                 billingState).append(" " + billingZip));
 
         //Display the customer's shipping information
-        System.out.println(fullShippingAdd.append("\nShipping Address:\n" + shippingStreet).append("\n" + shippingCity).append(", " +
+        System.out.println(fullShippingAdd.append("\nShipping Address:\n"
+                + shippingStreet).append("\n" + shippingCity).append(", " +
                 shippingState).append(" " + shippingZip));
 
     }
