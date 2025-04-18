@@ -44,9 +44,14 @@ public class CellPhone {
     // Display the user's input
     public void displayInfo(){
         System.out.println("\nHello, " + getOwner());
-        System.out.println("This is your new " + getModel() + " with serial number " + getSerialNumber());
+        System.out.println("This is your " + getModel() + " with serial number " + getSerialNumber());
         System.out.println("Your carrier is " + getCarrier() + " and your phone number is " + getPhoneNumber());
-        System.out.println("Enjoy your new phone!");
+    }
+
+    // Add a dial() method
+    public void dial(String phoneNumber) {
+        System.out.println();
+        System.out.println(getOwner() + "'s phone is calling " + phoneNumber);
     }
 
     public long getSerialNumber() {
