@@ -22,6 +22,14 @@ public class CellPhone {
         this.owner = "";
     }
 
+    public CellPhone(long serialNumber, String model, String carrier, String phoneNumber, String owner) {
+        setSerialNumber(serialNumber);
+        setModel(model);
+        setCarrier(carrier);
+        setPhoneNumber(phoneNumber);
+        setOwner(owner);
+    }
+
     // Prompt user for input and Use setter
     public void setUp(){
         System.out.print("\nWhat is the serial number? - ");

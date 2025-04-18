@@ -7,12 +7,23 @@ public class CellPhoneApplication {
         CellPhone cellphone1 = new CellPhone();
         CellPhone cellphone2 = new CellPhone();
 
+        // Exercise 3 Modify CellPhone
+        CellPhone cellphone3 = new CellPhone(1112223444, "Nokia", "T-Mobile","+46305603131","Bekzod");
+
+        // Populate the object and display by calling the methods
         cellphone1.setUp();
         cellphone1.displayInfo();
 
-        cellphone1.dial("123-45-67");
+        cellphone2.setUp();
+        cellphone2.displayInfo();
 
+        // Dial
+        cellphone1.dial(cellphone2.getPhoneNumber());
+
+        // Display the properties of a cell phone in a meaningful way.
         display(cellphone1);
+        display(cellphone2);
+        display(cellphone3);
    }
 
    public static void display(CellPhone cellphone){
