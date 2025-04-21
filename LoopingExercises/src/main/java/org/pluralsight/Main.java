@@ -1,7 +1,7 @@
 package org.pluralsight;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         WhileLoop whileLoop = new WhileLoop();
         DoWhileLoop doWhileLoop = new DoWhileLoop();
