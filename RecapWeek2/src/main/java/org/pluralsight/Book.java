@@ -17,6 +17,15 @@ public class Book {
         this.ISBN = ISBN;
     }
 
+    public void displayBookDetails() {
+        System.out.println("\nBook Details:");
+        System.out.println("Title: " + this.title);
+        System.out.println("Author: " + this.author);
+        System.out.println("ISBN: " + this.ISBN) ;
+        System.out.println("Published Year: " + this.publishingYear);
+        System.out.println("Page Number: " + this.pageNumber);
+    }
+
     // Create getters and setters
     public String getTitle() {
         return title;
@@ -75,14 +84,5 @@ public class Book {
 
     public void setPublishingYear(int publishingYear) {
         this.publishingYear = publishingYear;
-    }
-
-    public void displayBookDetails() {
-        System.out.println("\nBook Details:");
-        System.out.println("Title: " + this.title);
-        System.out.println("Author: " + this.author);
-        System.out.println("ISBN: " + this.ISBN) ;
-        System.out.println("Published Year: " + this.publishingYear);
-        System.out.println("Page Number: " + this.pageNumber);
     }
 }

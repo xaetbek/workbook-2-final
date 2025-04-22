@@ -7,15 +7,35 @@ public class Book {
     private boolean isCheckedOut;
     private String checkedOutTo;
 
-    //Create a constructor with id, isbn, title, isCheckedOut and checkedOutTo
-    public Book(int id, String isbn, String title, boolean isCheckedOut, String checkedOutTo) {
+    //Create a constructor with id, isbn, title
+    public Book(int id, String title, String isbn) {
         this.id = id;
         this.isbn = isbn;
         this.title = title;
-        this.isCheckedOut = isCheckedOut;
-        this.checkedOutTo = checkedOutTo;
+        this.isCheckedOut = false;
+        this.checkedOutTo = "";
     }
 
+    public void checkOut(String name){
+        this.checkedOutTo = name;
+        this.isCheckedOut = true;
+    }
+
+    public void checkIn() {
+        this.checkedOutTo = "";
+        isCheckedOut = false;
+    }
+
+    public void displayBookDetails() {
+        System.out.println("\nBook Details:");
+        System.out.println("ID: " + getId());
+        System.out.println("Title: " + getTitle());
+        System.out.println("ISBN: " + getIsbn()) ;
+        System.out.println("Is it checked out? " + getIsCheckedOut());
+        System.out.println("It is checked out to: " + getCheckedOutTo());
+    }
+
+    // Create getters and setters
     public int getId() {
         return id;
     }
@@ -40,12 +60,12 @@ public class Book {
         this.title = title;
     }
 
-    public boolean isCheckedOut() {
+    public boolean getIsCheckedOut() {
         return isCheckedOut;
     }
 
-    public void setCheckedOut(boolean checkedOut) {
-        isCheckedOut = checkedOut;
+    public void setIsCheckedOut(boolean checkedOut) {
+        this.isCheckedOut = checkedOut;
     }
 
     public String getCheckedOutTo() {
@@ -54,9 +74,5 @@ public class Book {
 
     public void setCheckedOutTo(String checkedOutTo) {
         this.checkedOutTo = checkedOutTo;
-    }
-
-    public void checkOut(String name){
-
     }
 }
